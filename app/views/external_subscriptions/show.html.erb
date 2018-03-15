@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @external_subscription.project %>
+</p>
+
+<p>
+  <strong>Investor:</strong>
+  <%= @external_subscription.investor %>
+</p>
+
+<%= link_to 'Edit', edit_external_subscription_path(@external_subscription) %> |
+<%= link_to 'Back', external_subscriptions_path %>

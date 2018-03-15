@@ -1,0 +1,2 @@
+module ExternalSubscriptionsHelper
+end

@@ -1,0 +1,27 @@
+<%= form_with(model: external_subscription, local: true) do |form| %>
+  <% if external_subscription.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(external_subscription.errors.count, "error") %> prohibited this external_subscription from being saved:</h2>
+
+      <ul>
+      <% external_subscription.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :project_id %>
+    <%= form.text_field :project_id, id: :external_subscription_project_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :investor_id %>
+    <%= form.text_field :investor_id, id: :external_subscription_investor_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>External Subscriptions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Investor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @external_subscriptions.each do |external_subscription| %>
+      <tr>
+        <td><%= external_subscription.project %></td>
+        <td><%= external_subscription.investor %></td>
+        <td><%= link_to 'Show', external_subscription %></td>
+        <td><%= link_to 'Edit', edit_external_subscription_path(external_subscription) %></td>
+        <td><%= link_to 'Destroy', external_subscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New External Subscription', new_external_subscription_path %>
