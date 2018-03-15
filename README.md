@@ -16,6 +16,6 @@ Create a **UNION SQL view** and use it to link `projects` and `investors`.
 - Create a model for this new table (https://github.com/yoones/rails-has_many-through-view/blob/master/app/models/project_investor.rb)
 - Then add `has_many through` relationships in models `project` and `investor`
 
-# TODO
+# Rspec
 
-- Add specs for this POC.
+I wrote specs only for Project model to ensure the relationship works properly.
